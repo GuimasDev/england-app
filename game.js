@@ -11,40 +11,34 @@ let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 
-let questions = [];
+let questions = [
+    {
+      "question": "Qual a moeda utilizada na Inglaterra?",
+      "choice1": "Libra",
+      "choice2": "Euro",
+      "choice3": "Libra Esterlina",
+      "choice4": "Dólar",
+      "answer": 3
+    },
+    {
+      "question": "Qual o nome do(a) monarca e do primeiro ministro da Inglaterra, respectivamente?",
+      "choice1": "Rainha Elizabeth e Boris Johnson",
+      "choice2": "Rei Charles e Boris Johnson",
+      "choice3": "Rainha Elizabeth e Winston Churchill",
+      "choice4": "Rei Charles e Rishi Sunak",
+      "answer": 4
+    },
+    {
+      "question": " How do you write 'Hello World' in an alert box?",
+      "choice1": "msgBox('Hello World');",
+      "choice2": "alertBox('Hello World');",
+      "choice3": "msg('Hello World');",
+      "choice4": "alert('Hello World');",
+      "answer": 4
+    }
+  ];
 
-fetch(
-    'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
-)
-    .then((res) => {
-        return res.json();
-    })
-    .then((loadedQuestions) => {
-        questions = loadedQuestions.results.map((loadedQuestion) => {
-            const formattedQuestion = {
-                question: loadedQuestion.question,
-            };
 
-            const answerChoices = [...loadedQuestion.incorrect_answers];
-            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
-            answerChoices.splice(
-                formattedQuestion.answer - 1,
-                0,
-                loadedQuestion.correct_answer
-            );
-
-            answerChoices.forEach((choice, index) => {
-                formattedQuestion['choice' + (index + 1)] = choice;
-            });
-
-            return formattedQuestion;
-        });
-
-        startGame();
-    })
-    .catch((err) => {
-        console.error(err);
-    });
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
@@ -55,8 +49,6 @@ startGame = () => {
     score = 0;
     availableQuesions = [...questions];
     getNewQuestion();
-    game.classList.remove('hidden');
-    loader.classList.add('hidden');
 };
 
 getNewQuestion = () => {
@@ -111,3 +103,5 @@ incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
 };
+
+startGame();
