@@ -1,7 +1,7 @@
 .choice-button{
   margin: 4px auto;
   width: 90%;
-  font-size: 20px;
+  font-size: 1rem;
   border: none;
   border-radius: 40px;
   background-color: rgba(255, 233, 233, 0.3);
@@ -36,17 +36,15 @@
   color: white;
 }
 
-
-/* .choice-prefix {
-  padding: 10px;
-  margin: 0px;
-  font-size: 25px;
+#question {
+  font-size: 1.5rem;
+  color: #ffe4e4;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.choice-text {
-  margin: 0px auto;
-  padding: 0px;
-} */
 
 .correct {
   background-color: #28a745;
