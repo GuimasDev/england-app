@@ -1,5 +1,4 @@
 const questionHTML = document.getElementById('question');
-// const choices = Array.from(document.getElementsByClassName('choice-text'));
 const choices = Array.from(document.querySelectorAll('button'));
 
 const progressText = document.getElementById('progressText');
@@ -22,30 +21,17 @@ let questions = loadAllQuestions();
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
     acceptingAnswers = true;
 
-    // selectedQuestions = getQuestions(MAX_QUESTIONS, questions);
     selectedQuestions = mixOrder(questions, MAX_QUESTIONS);
     loadNewQuestion()
 };
 
-// getQuestions = (quant, array) => {  // retorna um array com questoes aleatorias
-//     let arrayReturn = [];
-//     for (let i = 0; i < quant; i++) {
-//         let aux;
-//         do {
-//             aux = array[Math.floor(Math.random() * array.length)];
-//         }while(arrayReturn.includes(aux))
-//         arrayReturn[i] = aux;
-//     }
-//     console.log(arrayReturn)
-//     return arrayReturn;
-// };
 
 mixOrder = (array, count) => {
     let arrayReturn = [];
@@ -80,13 +66,13 @@ saveHighScore = () => {
 loadNewQuestion = () => {
     if (selectedQuestions.length == 0 || questionCounter >= MAX_QUESTIONS) {
         saveHighScore();
-        return window.location.assign('/end.html');
+        return window.location.assign('/england-app/end.html');
     }
 
     currentQuestion = selectedQuestions[questionCounter];
 
     progressText.innerText = `Question ${questionCounter + 1}/${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter + 1 / MAX_QUESTIONS)}%`;
+    progressBarFull.style.width = `${((questionCounter + 1) / MAX_QUESTIONS)* 100}%`;
     questionHTML.innerHTML = selectedQuestions[questionCounter].question;
 
     choicesArray = currentQuestion.choices;
