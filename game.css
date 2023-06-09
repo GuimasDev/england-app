@@ -1,7 +1,7 @@
 .choice-button{
   margin: 4px auto;
   width: 90%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border: none;
   border-radius: 40px;
   background-color: rgba(255, 233, 233, 0.3);
@@ -10,7 +10,9 @@
   -webkit-backdrop-filter: blur( 10px );
 
   padding: 20px 30px;
-  color: white;
+  /* color: white; */
+  
+  color: rgba(255, 228, 228, 0.8);
   font-family: Georgia, serif;
 }
 
@@ -39,9 +41,9 @@
 
 #question {
   font-size: 1.3rem;
-  color: #ffe4e4;
+  color: rgba(255, 228, 228, 0.8);
   text-align: center;
-  font-family: 'Pacifico', cursive;
+  /* font-family: 'Pacifico', cursive; */
   margin: 40px auto;
   padding: 0 20px;
   font-family: Georgia, serif;
