@@ -15,13 +15,11 @@ html {
 }
 
 h1 {
-    /* font-size: 70px; */
-    font-size: clamp(50px, 70px, 70px);
+    font-size: 55px;
     color: #ffe4e4;
     margin: 70px 0;
     font-weight: 300;
     text-align: center;
-    /* font-family: 'Pacifico', cursive; */
     font-family: Georgia, serif;
 }
 
@@ -30,7 +28,6 @@ h2 {
     color: #ffe4e4;
     font-weight: 300;
     text-align: center;
-    /* font-family: 'Pacifico', cursive; */
     font-family: Georgia, serif;
 }
 
@@ -46,7 +43,6 @@ p {
 
 .container {
     width: 100%;
-    /* height: 100vh; */
     margin: auto;
     padding: 15px;
 }
