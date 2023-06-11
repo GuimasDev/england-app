@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-    font-size: 55px;
+    font-size: 50px;
     color: #ffe4e4;
     margin: 70px 0;
     font-weight: 300;
@@ -121,6 +121,10 @@ p {
 @media screen and (min-width: 900px) {
     .container {
         width: 900px;
+    }
+
+    h1{
+        font-size: 70px;
     }
 
     html {
