@@ -83,12 +83,6 @@ loadNewQuestion = () => {
 
         choicesMixed[i].dataset['isCorrect'] = (i == currentQuestion.answer)
             ? true : false;
-
-        // if (choices[i].dataset['isCorrect'] == 'true') {
-        //     choices[i].classList.add('correct');
-        // } else {
-        //     choices[i].classList.add('incorrect');
-        // }
     }
 
     acceptingAnswers = true;
