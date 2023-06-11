@@ -1,0 +1,13 @@
+html{
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%), url(../imgs/bigben.jpg);
+}
+
+p{
+    color: antiquewhite;
+}
+
+li{
+    color: antiquewhite;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
